@@ -5,5 +5,5 @@
     "express": "^4.13.1",
     "mongoose": "^4.1.0"
   },
-  "scripts": {"start": "node api.js"}
+  "scripts": {"start": "node app.js"}
 }
