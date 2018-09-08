@@ -20,7 +20,6 @@ app.use(function(req, res) {
         res.sendfile('layouts/404.html', 404);
         });
 
-
 app.listen(PORT, function () {
   console.log('Server listening on', 3000)
 })
