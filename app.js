@@ -3,6 +3,8 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var Post = require('./models/post')
 
+const PORT = process.env.PORT || 3000;
+
 var app = express()
 app.use(bodyParser.json())
 
@@ -18,6 +20,7 @@ app.use(function(req, res) {
         res.sendfile('layouts/404.html', 404);
         });
 
-app.listen(3000, function () {
+
+app.listen(PORT, function () {
   console.log('Server listening on', 3000)
 })
