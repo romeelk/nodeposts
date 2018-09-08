@@ -1,0 +1,19 @@
+version: '2.1'
+
+services:
+  nodeposts:
+    image: nodeposts
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes: 
+       - /Users/rome3252/mongodb:/data/db
+    ports:
+      - "27017:27017"
