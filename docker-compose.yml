@@ -3,6 +3,7 @@ version: '2.2'
 services:
   nodeposts:
     image: nodeposts
+    container_name: nodeposts
     build: .
     environment:
       NODE_ENV: production
@@ -14,6 +15,8 @@ services:
     container_name: mongo
     image: mongo
     volumes: 
-       - /Users/$user/mongodb:/data/db
+       - data-volume:/data/db
     ports:
       - "27017:27017"
+volumes:
+  data-volume:
